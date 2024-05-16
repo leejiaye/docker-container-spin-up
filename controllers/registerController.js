@@ -43,7 +43,7 @@ async function registerService(repoUrl) {
     Cmd: [
       "sh",
       "-c",
-      `apk update && apk add --no-cache git && git clone ${repoUrl} app && cd app && npm install && npm run dev`,
+      `apk update && apk add --no-cache git && git clone ${repoUrl} app && cd app && npm install && npm run start`,
     ],
     ExposedPorts: { "3000/tcp": {} },
     HostConfig: {
